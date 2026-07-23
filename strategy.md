@@ -17,7 +17,7 @@
 | Security-conscious devs | HN, r/programming | Agent safety, host isolation |
 | Docker/container users | r/docker, r/selfhosted | Container tooling, dev environments |
 | Local AI enthusiasts | r/LocalLLaMA, HN | Running agents locally, privacy |
-| AI power users | Twitter/X, HN | Multi-agent workflows, tooling |
+| AI power users | HN, Reddit | Multi-agent workflows, tooling |
 
 ## Key messaging angles
 
@@ -43,10 +43,6 @@ Not a compromise. The agent sees your project, your configs, your credentials. I
 - **r/LocalLLaMA:** Focus on running AI agents locally with security
 - **r/programming:** General "running agents in containers" concept
 - **r/selfhosted:** Self-hosted AI coding setup
-
-### Twitter/X
-- **Format:** Thread with screenshots/GIFs
-- **Tone:** Punchy, visual, link-heavy
 
 ## Content assets needed
 

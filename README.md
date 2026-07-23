@@ -21,15 +21,14 @@ posts/
   reddit-docker.md   – Reddit r/docker draft
   reddit-localllaama.md – Reddit r/LocalLLaMA draft
   reddit-programming.md – Reddit r/programming draft
-  twitter-thread.md  – Twitter/X thread draft
 ```
 
 ## Status
 
 - [x] Strategy defined
-- [x] Post drafts created (HN, Reddit, Twitter)
+- [x] Post drafts created (HN, Reddit)
 - [x] Posting calendar created
-- [ ] Accounts created (HN, Reddit, Twitter)
+- [x] Accounts created (HN, Reddit)
 - [ ] Screenshot/GIF assets gathered
 - [ ] Posts published
 

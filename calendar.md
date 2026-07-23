@@ -2,9 +2,8 @@
 
 ## Pre-launch checklist
 
-- [ ] Create Hacker News account
-- [ ] Create Reddit account(s)
-- [ ] Create Twitter/X account
+- [x] Create Hacker News account
+- [x] Create Reddit account(s)
 - [ ] Gather screenshot of TUI overview screen
 - [ ] Record GIF of `aicage claude` starting (optional but high value)
 - [ ] Review and finalize all post drafts
@@ -13,7 +12,7 @@
 
 Before posting promotional content, establish that your accounts are real:
 
-- **Day 1-2:** Create accounts on HN, Reddit, Twitter/X
+- **Day 1-2:** Create accounts on HN, Reddit
 - **Day 3-5:** Make a few genuine comments on other posts in target subreddits
 - **Day 5-7:** Upvote and engage with relevant content (Docker, AI tools, coding agents)
 
@@ -35,10 +34,6 @@ Before posting promotional content, establish that your accounts are real:
 ### Saturday – Reddit r/LocalLLaMA
 - Post the LocalLLaMA-focused draft
 - Reply to comments
-
-### Sunday – Twitter/X
-- Post the thread
-- Engage with replies
 
 ## Week 3: Follow-up
 
@@ -64,6 +59,5 @@ Before posting promotional content, establish that your accounts are real:
 
 - **HN peak:** Tue-Thu 9am-12pm US Eastern
 - **Reddit peak:** Tue-Thu 10am-2pm US Eastern
-- **Twitter peak:** Mon-Fri 9am-11am US Eastern
 - Avoid weekends for HN (lower traffic)
 - Reddit r/programming is less time-sensitive
