@@ -36,7 +36,7 @@ This isn't perfect security. If you enable Docker socket access so the agent can
 What makes it actually comfortable instead of a constant fight with Docker:
 
 - Container uses your UID/GID and username, so file permissions just work. No chown, no permission errors.
-- Updated agent images are usually available within ~15 min of an agent release. Old images get cleaned up automatically.
+- Updated agent images are usually available within about 15 minutes of an agent release. Old images get cleaned up automatically.
 - Your existing agent config (API keys, preferences) is mounted in. No re-setup.
 - Extensions can add tools on top of any agent image. Custom agents and base images supported.
 
