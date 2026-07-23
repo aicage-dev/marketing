@@ -20,9 +20,12 @@ Install:
 
   pipx install aicage
 
-Run:
+Run your favorite agent:
 
   aicage claude
+  aicage codex
+  aicage gemini
+  and many more
 
 You get a TUI setup screen for extensions, Docker args, and additional shares. Press OK and a container starts with your project mounted, the agent installed, and a full dev toolchain. You work with the agent like normal – it reads your code, runs tests, makes edits. But it can't reach the rest of your system.
 
