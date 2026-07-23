@@ -34,7 +34,7 @@ What you keep: same source code files, same git diff in your IDE, same workflow.
 
 Built-in agents: Claude, Codex, Gemini, Copilot, Goose, OpenCode, Qwen Code, and more. Custom agents and extensions supported.
 
-No telemetry. Image signatures verified. Works on Linux, Windows (WSL). macOS is experimental (I don't have the hardware, but it works with Docker Desktop).
+No telemetry. Image signatures verified. Works on Linux, Windows (WSL). macOS is experimental (I don't have the hardware).
 
 https://github.com/aicage/aicage
 
