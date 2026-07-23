@@ -26,9 +26,9 @@ You get a TUI setup screen for extensions, Docker args, and additional shares. P
 
 I've seen agents forget to use the local venv and install packages at OS level without asking. Took me going through logs to figure out what they broke. With aicage, that kind of damage stays inside the container.
 
-There's also the privacy angle: some projects I'm legally not allowed to share with LLMs in certain countries. Running the agent in a container with only the project mounted gives me at least some control over what the LLM can access, while still letting the agent do its job.
+There's also the privacy angle: code or files you don't want the agent or LLM to read. Running in a container with only the project mounted gives you control over what's visible, while still letting the agent do its job.
 
-This isn't perfect security. Sharing the Docker socket lowers the boundary. But the risk is never higher than running the agent directly on your host, and for casual use (agent accidentally reading things it shouldn't, installing stuff where it shouldn't) it's much lower. The agent would have to actively try to break out, not just be careless.
+This isn't perfect security. If you enable Docker socket access so the agent can use Docker, that lowers the boundary – but it's opt-in, not default. But the risk is never higher than running the agent directly on your host, and for casual use (agent accidentally reading things it shouldn't, installing stuff where it shouldn't) it's much lower. The agent would have to actively try to break out, not just be careless.
 
 What makes it actually comfortable instead of a constant fight with Docker:
 
@@ -41,7 +41,7 @@ What you keep: same source code files, same git diff in your IDE, same workflow.
 
 Built-in agents: Claude, Codex, Gemini, Copilot, Goose, OpenCode, Qwen Code, and more.
 
-No telemetry. Image signatures verified. Works on Linux, Windows (WSL). macOS is experimental (I don't have the hardware).
+No telemetry. Rootless Docker support. Works on Linux, Windows (WSL). macOS is experimental (I don't have the hardware). Images are signature-verified.
 
 https://github.com/aicage/aicage
 
