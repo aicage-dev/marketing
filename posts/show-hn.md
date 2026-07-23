@@ -27,9 +27,9 @@ Run your favorite agent:
   aicage gemini
   and many more
 
-You get a TUI setup screen for extensions, Docker args, and additional shares. Press OK and a container starts with your project mounted, the agent installed, and a full dev toolchain. You work with the agent like normal – it reads your code, runs tests, makes edits. But it can't reach the rest of your system.
+You get a TUI setup screen for extensions, Docker args, and additional shares. Press OK and a container starts with your project mounted, the agent installed, and a full dev toolchain. You work with the agent like normal – it reads your code, runs tests, makes edits. But it only sees what you mount or explicitly share.
 
-There's also the privacy angle: code or files you don't want the agent or LLM to read. Running in a container with only the project mounted gives you control over what's visible, while still letting the agent do its job.
+There's also the privacy angle: code or files you don't want the agent or LLM to read. Running in a container with only the project mounted gives you much tighter control over what's visible, while still letting the agent do its job.
 
 This isn't perfect security. If you enable Docker socket access so the agent can use Docker, that lowers the boundary – but it's opt-in, not default. But the risk is not higher than running the agent directly on your host, and for casual use (agent accidentally reading things it shouldn't, installing stuff where it shouldn't) it's much lower. The agent would have to actively try to break out, not just be careless.
 
