@@ -46,7 +46,7 @@ What you keep: same source code files, same git diff in your IDE, same workflow.
 
 Built-in agents: Claude, Codex, Gemini, Copilot, Goose, OpenCode, Qwen Code, and more.
 
-No telemetry. Rootless Docker support. Works on Linux, Windows (WSL). macOS is experimental (I don't have the hardware). Built-in remote images are signature-verified before pull.
+No telemetry. Rootless Docker support. Works on Linux, Windows (WSL). Built-in remote images are signature-verified before pull.
 
 https://github.com/aicage/aicage
 
