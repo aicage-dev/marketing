@@ -31,7 +31,7 @@ You get a TUI setup screen for extensions, Docker args, and additional shares. P
 
 There's also the privacy angle: code or files you don't want the agent or LLM to read. Running in a container with only the project mounted gives you much tighter control over what's visible, while still letting the agent do its job.
 
-This isn't perfect security. If you enable Docker socket access so the agent can use Docker, that lowers the boundary – but it's opt-in, not default. But the risk is not higher than running the agent directly on your host, and for casual use (agent accidentally reading things it shouldn't, installing stuff where it shouldn't) it's much lower. The agent would have to actively try to break out, not just be careless.
+This isn't perfect security. If you enable Docker socket access so the agent can use Docker, that lowers the boundary – but it's opt-in, not default. For the common case of an agent being careless rather than intentionally trying to get at more of your system, this is a big improvement over running it directly on your host.
 
 What makes it actually comfortable instead of a constant fight with Docker:
 
