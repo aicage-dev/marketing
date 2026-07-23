@@ -28,12 +28,12 @@ I've seen agents forget to use the local venv and install packages at OS level w
 
 There's also the privacy angle: code or files you don't want the agent or LLM to read. Running in a container with only the project mounted gives you control over what's visible, while still letting the agent do its job.
 
-This isn't perfect security. If you enable Docker socket access so the agent can use Docker, that lowers the boundary – but it's opt-in, not default. But the risk is never higher than running the agent directly on your host, and for casual use (agent accidentally reading things it shouldn't, installing stuff where it shouldn't) it's much lower. The agent would have to actively try to break out, not just be careless.
+This isn't perfect security. If you enable Docker socket access so the agent can use Docker, that lowers the boundary – but it's opt-in, not default. But the risk is not higher than running the agent directly on your host, and for casual use (agent accidentally reading things it shouldn't, installing stuff where it shouldn't) it's much lower. The agent would have to actively try to break out, not just be careless.
 
 What makes it actually comfortable instead of a constant fight with Docker:
 
 - Container uses your UID/GID and username, so file permissions just work. No chown, no permission errors.
-- Agent updates land within 15 minutes of release. Old images get cleaned up automatically.
+- Updated agent images are usually available within ~15 min of an agent release. Old images get cleaned up automatically.
 - Your existing agent config (API keys, preferences) is mounted in. No re-setup.
 - Extensions can add tools on top of any agent image. Custom agents and base images supported.
 
