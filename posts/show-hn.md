@@ -1,52 +1,47 @@
-# Show HN: aicage - Run AI coding agents in Docker for host isolation
+# Show HN Post
 
-## Post title
+## Title
 
-Show HN: aicage – run AI coding agents in Docker with host isolation
+Show HN: aicage – run AI coding agents in Docker to keep them off your host
 
-## Post URL
+## URL
 
 https://github.com/aicage/aicage
 
-## Post body
+## Body
 
-AI coding agents (Claude, Codex, Gemini, Copilot, etc.) need deep access to your machine – they read code, run shells,]
-install packages. Their built-in safety checks are limited, and some require relaxing safety modes to function fully.
+AI coding agents need "yolo" mode to be useful – they have to run tests, install dependencies, edit files freely. But yolo on your host means the agent can read anything, install/uninstall OS packages, and the LLM behind it sees everything on your machine.
 
-aicage runs these agents inside Docker containers. You mount only what the agent needs. The rest of your host is
-unreachable.
+I wrote aicage to run these agents in Docker containers instead. Same workflow, same files, but the agent can only touch what you explicitly mount.
 
-**Quick start:**
+Install:
 
-```
-pipx install aicage
-aicage claude
-```
+  pipx install aicage
 
-**What it does:**
+Run:
 
-- Wraps 10+ AI coding agents in Docker containers
-- Mounts your project directory and agent config into the container
-- TUI setup screen for configuration of shared files/folders, image extensions and Docker args
-- Per-project config saved automatically
-- Custom Docker run args, agents, extensions, and base images supported
+  aicage claude
 
-Why containers:
+What happens: a Docker container starts with your project mounted, the agent installed, and a full dev toolchain. You work with the agent like normal – it reads your code, runs tests, makes edits. But it can't reach the rest of your system.
 
-- Allow/deny lists only cover known patterns
-- "Read-only project" features are software rules
-- Containers give a hard boundary: the agent accesses only what you mount
+I've seen agents forget to use the local venv and install packages at OS level without asking. Took me going through logs to figure out what they broke. With aicage, that kind of damage stays inside the container.
 
-No telemetry. Image signature verification. Rootless Docker support. Works on Linux, macOS, Windows.
+There's also the privacy angle: some projects I'm legally not allowed to share with LLMs in certain countries. Running the agent in a container with only the project mounted gives me at least some control over what the LLM can access, while still letting the agent do its job.
+
+This isn't perfect security. Sharing the Docker socket lowers the boundary. But the risk is never higher than running the agent directly on your host, and for casual use (agent accidentally reading things it shouldn't, installing stuff where it shouldn't) it's much lower. The agent would have to actively try to break out, not just be careless.
+
+What you keep: same source code files, same git diff in your IDE, same workflow. What you lose: the agent's ability to casually mess with your system.
+
+Built-in agents: Claude, Codex, Gemini, Copilot, Goose, OpenCode, Qwen Code, and more. Custom agents and extensions supported.
+
+No telemetry. Image signatures verified. Works on Linux, Windows (WSL). macOS is experimental (I don't have the hardware, but it works with Docker Desktop).
 
 https://github.com/aicage/aicage
 
 ---
 
-## Tips for posting
+## Tips
 
-- Post between 9-11am US Eastern, Tue-Thu
-- Reply to every comment in the first 2 hours
-- Keep responses technical and concise
-- If someone finds a bug, thank them and link to the issue tracker
-- Don't be defensive about criticism – engage constructively
+- Reply to comments, especially critical ones
+- If someone points out a real limitation, agree and explain your tradeoff
+- Don't oversell the security angle – be honest about what Docker can and can't do
