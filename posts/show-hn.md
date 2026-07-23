@@ -10,9 +10,11 @@ https://github.com/aicage/aicage
 
 ## Post body
 
-AI coding agents (Claude, Codex, Gemini, Copilot, etc.) need deep access to your machine – they read code, run shells, install packages. Their built-in safety checks are limited, and some require relaxing safety modes to function fully.
+AI coding agents (Claude, Codex, Gemini, Copilot, etc.) need deep access to your machine – they read code, run shells,]
+install packages. Their built-in safety checks are limited, and some require relaxing safety modes to function fully.
 
-aicage runs these agents inside Docker containers. You mount only what the agent needs. The rest of your host is unreachable.
+aicage runs these agents inside Docker containers. You mount only what the agent needs. The rest of your host is
+unreachable.
 
 **Quick start:**
 
@@ -23,30 +25,21 @@ aicage claude
 
 **What it does:**
 
-- Wraps 10 AI coding agents in Docker containers
+- Wraps 10+ AI coding agents in Docker containers
 - Mounts your project directory and agent config into the container
-- Provides a TUI setup screen for choosing agents, base images, extensions, and Docker args
+- TUI setup screen for configuration of shared files/folders, image extensions and Docker args
 - Per-project config saved automatically
-- Supports custom agents, extensions, and base images
+- Custom Docker run args, agents, extensions, and base images supported
 
-**Built-in agents:** agy, claude, codex, copilot, crush, droid, gemini, goose, opencode, qwen
+Why containers:
 
-**Why containers?**
+- Allow/deny lists only cover known patterns
+- "Read-only project" features are software rules
+- Containers give a hard boundary: the agent accesses only what you mount
 
-- Allow/deny lists only cover known patterns – unexpected commands can slip through
-- "Read-only project" features are software rules – other files still sit on the same host
-- Containers create a hard boundary: the agent accesses only what you explicitly mount
+No telemetry. Image signature verification. Rootless Docker support. Works on Linux, macOS, Windows.
 
-**Key details:**
-
-- No telemetry, no user data collection
-- Image signature verification before use
-- 96% unit test coverage, integration tests for real Docker runs
-- Rootless Docker support
-- Works on Linux, macOS, Windows (WSL)
-- Extensible: add your own agents, base images, and tool extensions
-
-GitHub: https://github.com/aicage/aicage
+https://github.com/aicage/aicage
 
 ---
 
